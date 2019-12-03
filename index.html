@@ -1,16 +1,729 @@
 <!DOCTYPE html>
-<html>
-<body>
-<h1>Hello Wld</h1>
-<p>I'm hosted with GitHub Pages.</p>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>QA - Tools</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="QA Tools">
 
-<ul>
-    <li><a href='https://demoqa.com/' target='_blank'>Might be something worth trying for...</a></li>
-    <li><a href='blog.html'>blog</a></li>
-    <li><a href='checkout-form.html'>Checkout Form</a></li>
-    <li><a href='practice-automation-form.html'>Practice Automation Form</a></li>
-    <li><a href='shopping-cart.html'>Shopping Cart</a></li>
-    <li><a href='iframe.html'>iFrame</a></li>
-</ul>
-</body>
+    <link href="assets/img/favicon.ico" rel="icon" type="image/png">
+    
+    <link rel="stylesheet" href="./assets/vendor/bootstrap/bootstrap.min.css">
+        <link rel="stylesheet" href="./assets/css/styles.css">
+		<link rel="stylesheet" href="./assets/css/lazy.css">
+		<link rel="stylesheet" href="./assets/css/demo.css">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css" integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h" crossorigin="anonymous">
+  </head>
+  <body class="index">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+                <div class="container">
+                  <a class="navbar-brand" href="./"><img src="assets/img/logo.svg" alt="Example Navbar 1" class="mr-2" height="30">QA Tools</a>
+                  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown-7" aria-controls="navbarNavDropdown-7"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarNavDropdown-7">
+                      <ul class="navbar-nav">
+                      <li class="nav-item dropdown mx-2">
+                        <a class="nav-link" href="#" id="nav-inner-primary_dropdown_1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Tools</a>
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="nav-inner-primary_dropdown_1">
+                          <a class="dropdown-item" href="checkout-form.html">Checkout Form</a>
+                          <a class="dropdown-item" href="shopping-cart.html">Shopping Cart</a>
+                          <a class="dropdown-item" href="practice-automation-form.html">Practice Automation Form</a>
+                          <a class="dropdown-item" href="iframe.html">iFrame</a>
+                          <a class="dropdown-item" href="buttons.html">Additional Buttons</a>
+                          <a class="dropdown-item" href="inputs.html">Additional Inputs</a>
+                        </div>
+                      </li>
+                      <li class="nav-item dropdown mx-2">
+                        <a class="nav-link" href="#" id="nav-inner-primary_dropdown_1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Pages</a>
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="nav-inner-primary_dropdown_1">
+                          <a class="dropdown-item" href="register.html">Register</a>
+                          <a class="dropdown-item" href="profile.html">Profile</a>
+                          <a class="dropdown-item" href="blog.html">Blog</a>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </nav>
+
+	<div class="page-hero bg-primary text-white" id="banner">
+		<div class="bubbles d-none d-md-block">
+<!-- 				bubbles -->
+      <div class="bubble bubble-1 rotate-bubble bg-warning"></div>
+      <div class="bubble bubble-2 bubble-bottom-right bg-danger rotate-bubble"></div>
+      <div class="bubble bubble-3 bubble-top-right bg-warning rotate-bubble"></div>
+      <div class="bubble bubble-4 bubble-top-left bg-info rotate-bubble"></div>
+      <div class="bubble bubble-5 bg-info rotate-bubble"></div>
+      <div class="bubble bubble-6 bubble-bottom-right bg-danger rotate-bubble"></div>
+      <div class="bubble bubble-7 bubble-top-right bg-success rotate-bubble"></div>
+      <div class="bubble bubble-8 bubble-top-left bg-success rotate-bubble"></div>
+      <div class="bubble bubble-9 bg-warning rotate-bubble"></div>
+      <div class="bubble bubble-10 bg-danger rotate-bubble"></div>
+      <div class="bubble bubble-11 bubble-bottom-right bg-info rotate-bubble"></div>
+      <div class="bubble bubble-12 bubble-top-right bg-success rotate-bubble"></div>
+      <div class="bubble bubble-13 bubble-top-left bg-success rotate-bubble"></div>
+<!--         circles -->
+      <div class="circle circle-1 bg-light rotate-circle"></div>
+      <div class="circle circle-2 bg-success rotate-circle"></div>
+      <div class="circle circle-3 bg-danger rotate-circle"></div>
+      <div class="circle circle-4 bg-info rotate-circle"></div>
+      <div class="circle circle-5 bg-success rotate-circle"></div>
+      <div class="circle circle-6 bg-info rotate-circle"></div>
+      <div class="circle circle-7 bg-warning rotate-circle"></div>
+      <div class="circle circle-8 bg-white rotate-circle"></div>
+      <div class="circle circle-9 bg-warning rotate-circle"></div>
+      <div class="circle circle-10 bg-danger rotate-circle"></div>
+		</div>
+  	<div class="container">
+      <div class="row">
+        <div class="col-12 col-lg-8  offset-lg-2 text-center">
+	          <div class="title">
+	            <h1 class="display-2 text-white">QA Tools</h1>
+	            <h4 class="text-white">Automation Testing for Lynn</h4>
+	          </div>
+        </div>
+      </div>
+    </div>
+	</div>
+
+<div class="intro bg-light">
+  <div class="container">
+
+    <!-- Colours
+    ================================================== -->
+    <div class="section">
+      <div class="row">
+        <div class="col-12 col-md-8 offset-md-2">
+          <div class="page-header mb-5">
+            <h2 id="colours">Colours</h2>
+            <p>We have improved the Bootstrap colour selection with a brighter variation. All the components from the kit will have variations for each one of this contextual classes.</p>
+          </div>
+
+
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 col-lg-10 offset-lg-1">
+	        <div class="row">
+
+<!-- 			        primary -->
+		        <div class="col-12 col-sm-6 col-lg-3">
+			        <div class="card no-hover color">
+				        <div class="card-body d-flex flex-column align-items-center">
+					        <div class="swatch" style="background-color: #611F6A; "></div>
+					        <div class="title">Primary</div>
+					        <div class="hex text-muted">#611F6A</div>
+				        </div>
+			        </div>
+		        </div>
+
+<!-- 			        secondary -->
+		        <div class="col-12 col-sm-6 col-lg-3">
+			        <div class="card no-hover color">
+				        <div class="card-body d-flex flex-column align-items-center">
+					        <div class="swatch" style="background-color: #071D5C; "></div>
+					        <div class="title">Secondary</div>
+					        <div class="hex text-muted">#071D5C</div>
+				        </div>
+			        </div>
+		        </div>
+
+<!-- 			        success -->
+		        <div class="col-12 col-sm-6 col-lg-3">
+			        <div class="card no-hover color">
+				        <div class="card-body d-flex flex-column align-items-center">
+					        <div class="swatch" style="background-color: #007A5B; "></div>
+					        <div class="title">Success</div>
+					        <div class="hex text-muted">#007A5B</div>
+				        </div>
+			        </div>
+		        </div>
+
+<!-- 			        info -->
+		        <div class="col-12 col-sm-6 col-lg-3">
+			        <div class="card no-hover color">
+				        <div class="card-body d-flex flex-column align-items-center">
+					        <div class="swatch" style="background-color: #1264A4; "></div>
+					        <div class="title">Info</div>
+					        <div class="hex text-muted">#1264A4</div>
+				        </div>
+			        </div>
+		        </div>
+	        </div>
+	        <div class="row">
+
+<!-- 			        warning -->
+		        <div class="col-12 col-sm-6 col-lg-3">
+			        <div class="card no-hover color">
+				        <div class="card-body d-flex flex-column align-items-center">
+					        <div class="swatch" style="background-color: #ECB22F; "></div>
+					        <div class="title">Warning</div>
+					        <div class="hex text-muted">#ECB22F</div>
+				        </div>
+			        </div>
+		        </div>
+
+<!-- 			        danger -->
+		        <div class="col-12 col-sm-6 col-lg-3">
+			        <div class="card no-hover color">
+				        <div class="card-body d-flex flex-column align-items-center">
+					        <div class="swatch" style="background-color: #E01E5B; "></div>
+					        <div class="title">Danger</div>
+					        <div class="hex text-muted">#E01E5B</div>
+				        </div>
+			        </div>
+		        </div>
+
+<!-- 			        dark -->
+		        <div class="col-12 col-sm-6 col-lg-3">
+			        <div class="card no-hover color">
+				        <div class="card-body d-flex flex-column align-items-center">
+					        <div class="swatch" style="background-color: #212529; "></div>
+					        <div class="title">Dark</div>
+					        <div class="hex text-muted">#212529</div>
+				        </div>
+			        </div>
+		        </div>
+
+<!-- 			        light -->
+		        <div class="col-12 col-sm-6 col-lg-3">
+			        <div class="card no-hover color">
+				        <div class="card-body d-flex flex-column align-items-center">
+					        <div class="swatch" style="background-color: #EBEAEB; "></div>
+					        <div class="title">Light</div>
+					        <div class="hex text-muted">#EBEAEB</div>
+				        </div>
+			        </div>
+		        </div>
+
+	        </div>
+        </div>
+      </div>
+
+    </div>
+
+        
+</div>
+
+  <div class="container">
+
+    <!-- Images
+    ================================================== -->
+    <div class="section">
+      <div class="row">
+        <div class="col-md-8 offset-md-2">
+					<div class="header">
+            <h2 id="images">Images</h2>
+            <p>Images are displayed as blocks by default and they will take the entire width of their parent. Using the border and shadow utilities, you can adjust the image's display.</p>
+          </div>
+        </div>
+      </div>
+      <div class="component text-center">
+        <div class="row">
+	        <div class="col-lg-10 offset-lg-1">
+			      <div class="row">
+			        <div class="col-12 col-md-3">
+			          <p class="lead pt-3">Default</p>
+			          <img src="assets/img/lorde.png" alt="Rounded image" class="img-fluid rounded" style="width: 150px;">
+			        </div>
+			        <div class="col-12 col-md-3 mt-3 mt-md-0">
+			          <p class="lead pt-3">Round</p>
+			          <img src="assets/img/lorde.png" alt="Circle image" class="img-fluid rounded-circle" style="width: 150px;">
+			        </div>
+			        <div class="col-12 col-md-3 mt-3 mt-md-0">
+			          <p class="lead pt-3">Raised</p>
+			          <img src="assets/img/lorde.png" alt="Raised image" class="img-fluid rounded shadow-lg" style="width: 150px;">
+			        </div>
+			        <div class="col-12 col-md-3 mt-3 mt-md-0">
+			          <p class="lead pt-3">Round & Raised</p>
+			          <img src="assets/img/lorde.png" alt="Raised circle image" class="img-fluid rounded-circle shadow-lg" style="width: 150px;">
+			        </div>
+			      </div>
+	        </div>
+        </div>
+      </div>
+		</div>
+
+    
+	<div class="container">
+    <!-- Tables
+    ================================================== -->
+    <div class="section">
+
+      <div class="row">
+        <div class="col-md-8 offset-md-2">
+          <div class="page-header">
+            <h2 id="tables">Tables</h2>
+            <p>Tables get a new look inside the Lazy Kit. Using contextual classes you can colour rows and cells.</p>
+          </div>
+
+          <div class="component">
+								<table class="table table-hover">
+	                <thead>
+	                  <tr>
+	                    <th scope="col">Type</th>
+	                    <th scope="col">Column heading</th>
+	                  </tr>
+	                </thead>
+	                <tbody>
+		                <tr class="table-light">
+	                    <th scope="row">Light</th>
+	                    <td>Let it be.</td>
+	                  </tr>
+	                  <tr class="table-active">
+	                    <th scope="row">Active</th>
+	                    <td>Eat well, feel well.</td>
+	                  </tr>
+	                  <tr class="table-dark">
+	                    <th scope="row">Dark</th>
+	                    <td>But first coffee.</td>
+	                  </tr>
+		                <tr class="table-primary">
+	                    <th scope="row">Primary</th>
+	                    <td>Think before you speak.</td>
+	                  </tr>
+	                  <tr class="table-secondary">
+	                    <th scope="row">Secondary</th>
+	                    <td>Carpe diem.</td>
+	                  </tr>
+	                  <tr class="table-success">
+	                    <th scope="row">Success</th>
+	                    <td>Success. It’s a Mind Game.</td>
+	                  </tr>
+	                  <tr class="table-danger">
+	                    <th scope="row">Danger</th>
+	                    <td>One day at a time.</td>
+	                  </tr>
+	                  <tr class="table-warning">
+	                    <th scope="row">Warning</th>
+	                    <td>Good vibes only.</td>
+	                  </tr>
+	                  <tr class="table-info">
+	                    <th scope="row">Info</th>
+	                    <td>All you need is sleep.</td>
+	                  </tr>
+	                </tbody>
+	              </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <!-- Indicators
+    ================================================== -->
+		<div class="section">
+      <div class="row">
+        <div class="col-md-8 offset-md-2">
+	        <div class="header">
+		        <h2 id="indicators">Indicators</h2>
+		        <p>Indicators are useful elements that can help you keep your users informed. Breadcrumbs and pagination let you know about your current page. Badged and progress bars give extra information about the information you are currently viewing.</p>
+	        </div>
+        </div>
+        <div class="col-md-12">
+	        <div class="component">
+		        <div class="row">
+		          <div class="col-md-6">
+		            <p class="lead">Breadcrumbs</p>
+		              <ol class="breadcrumb">
+		                <li class="breadcrumb-item active">Home</li>
+		              </ol>
+		              <ol class="breadcrumb">
+		                <li class="breadcrumb-item"><a href="#">Home</a></li>
+		                <li class="breadcrumb-item active">Library</li>
+		              </ol>
+		              <ol class="breadcrumb">
+		                <li class="breadcrumb-item"><a href="#">Home</a></li>
+		                <li class="breadcrumb-item"><a href="#">Library</a></li>
+		                <li class="breadcrumb-item active">Data</li>
+		              </ol>
+		          </div>
+
+		          <div class="col-md-6 mt-5 mt-md-0">
+		            <p class="lead">Pagination</p>
+			            <div>
+		                <ul class="pagination pagination-lg">
+		                  <li class="page-item disabled">
+		                    <a class="page-link" href="#a"><i class="fas fa-long-arrow-alt-left"></i></a>
+		                  </li>
+		                  <li class="page-item active">
+		                    <a class="page-link" href="#a">1</a>
+		                  </li>
+		                  <li class="page-item">
+		                    <a class="page-link" href="#a">2</a>
+		                  </li>
+		                  <li class="page-item">
+		                    <a class="page-link" href="#a">3</a>
+		                  </li>
+		                  <li class="page-item">
+		                    <a class="page-link" href="#a"><i class="fas fa-long-arrow-alt-right"></i></a>
+		                  </li>
+		                </ul>
+		              </div>
+		              <div>
+		                <ul class="pagination">
+		                  <li class="page-item disabled">
+		                    <a class="page-link" href="#a"><i class="fas fa-long-arrow-alt-left"></i></a>
+		                  </li>
+		                  <li class="page-item active">
+		                    <a class="page-link" href="#a">1</a>
+		                  </li>
+		                  <li class="page-item">
+		                    <a class="page-link" href="#a">2</a>
+		                  </li>
+		                  <li class="page-item">
+		                    <a class="page-link" href="#a">3</a>
+		                  </li>
+		                  <li class="page-item">
+		                    <a class="page-link" href="#a"><i class="fas fa-long-arrow-alt-right"></i></a>
+		                  </li>
+		                </ul>
+		              </div>
+		              <div>
+		                <ul class="pagination pagination-sm">
+		                  <li class="page-item disabled">
+		                    <a class="page-link" href="#a"><i class="fas fa-long-arrow-alt-left"></i></a>
+		                  </li>
+		                  <li class="page-item active">
+		                    <a class="page-link" href="#a">1</a>
+		                  </li>
+		                  <li class="page-item">
+		                    <a class="page-link" href="#a">2</a>
+		                  </li>
+		                  <li class="page-item">
+		                    <a class="page-link" href="#a">3</a>
+		                  </li>
+		                  <li class="page-item">
+		                    <a class="page-link" href="#a"><i class="fas fa-long-arrow-alt-right"></i></a>
+		                  </li>
+		                </ul>
+		              </div>
+		          </div>
+		        </div>
+	        </div>
+        </div>
+        <div class="col-md-12">
+	        <div class="component">
+		        <div class="row">
+			        <div class="col-md-6">
+			          <p class="lead">Badges</p>
+			          <div class="mb-2">
+			            <span class="badge badge-primary">Primary</span>
+			            <span class="badge badge-secondary">Secondary</span>
+			            <span class="badge badge-success">Success</span>
+			            <span class="badge badge-danger">Danger</span>
+			            <span class="badge badge-warning">Warning</span>
+			            <span class="badge badge-info">Info</span>
+			            <span class="badge badge-light">Light</span>
+			            <span class="badge badge-dark">Dark</span>
+			          </div>
+			          <div class="mb-2">
+			            <span class="badge badge-pill badge-primary">Primary</span>
+			            <span class="badge badge-pill badge-secondary">Secondary</span>
+			            <span class="badge badge-pill badge-success">Success</span>
+			            <span class="badge badge-pill badge-danger">Danger</span>
+			            <span class="badge badge-pill badge-warning">Warning</span>
+			            <span class="badge badge-pill badge-info">Info</span>
+			            <span class="badge badge-pill badge-light">Light</span>
+			            <span class="badge badge-pill badge-dark">Dark</span>
+			          </div>
+			        </div>
+			        <div class="col-md-6 mt-5 mt-md-0">
+				        <p class="lead">Progress Bars</p>
+				        <div class="component">
+				          <div class="progress">
+		                <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+		              </div>
+		              <div class="progress">
+		                <div class="progress-bar bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+		              </div>
+		              <div class="progress">
+		                <div class="progress-bar bg-info" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+		              </div>
+		              <div class="progress">
+		                <div class="progress-bar bg-warning" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+		              </div>
+		              <div class="progress">
+		                <div class="progress-bar bg-danger" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+		              </div>
+				        </div>
+			        </div>
+		        </div>
+	        </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Alerts
+    ================================================== -->
+    <div class="section">
+
+      <div class="row">
+        <div class="col-md-8 offset-md-2">
+          <div class="header">
+            <h2 id="alerts">Alerts</h2>
+            <p>Provide contextual feedback messages for typical user actions with the handful of available and flexible alert messages.</p>
+          </div>
+        </div>
+      </div>
+      <div class="component">
+        <!-- Info Dismissible Alert -->
+        <div class="alert alert-info alert-dismissible fade show" role="alert">
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <i class="fa fa-info"></i>
+          <strong>Hey!</strong> I think you should know <a href="#">this</a>.
+        </div>
+
+        <!-- Success Dismissible Alert -->
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <i class="fa fa-check"></i>
+          <strong>Yay!</strong> Everything is fine! You can go back to your <a href="#">page</a>.
+        </div>
+
+        <!-- Warning Dismissible Alert -->
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <i class="fa fa-warning"></i>
+          <strong>Oops!</strong> Something might be wrong. Make a quick <a href="#">test</a>!
+        </div>
+
+        <!-- Danger Dismissible Alert -->
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <i class="fa fa-exclamation-circle"></i>
+          <strong>On no!</strong> Something really bad happened! Clear the premises and go <a href="#">somewhere safe</a>!
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Cards
+    ================================================== -->
+    <div class="section">
+      <div class="row">
+        <div class="col-md-8 offset-md-2">
+          <div class="header">
+          	<h2>Cards</h2>
+          	<p>The original structure for the Bootstrap 4 cards remains intact. Lazy Kit brings more focus on them with the help of shadows and hover events.</p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="component">
+						<div class="card">
+							<div class="card-header">
+						  	<img class="card-img" src="assets/img/dog-1.jpg" alt="dog">
+							</div>
+						  <div class="card-body">
+							  <span class="badge badge-success mb-2">Pets</span>
+						    <h4 class="card-title">How to look after and care for a dog</h4>
+						    <p class="card-text">Owning a dog is great fun and immensely rewarding. But, dogs have complex needs and each dog is unique. </p>
+						  </div>
+						  <div class="card-footer">
+								<a href="#a" class="btn btn-primary">Read More</a>
+						  </div>
+						</div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="component">
+            <div class="card">
+							<div class="card-header">
+						  	<img class="card-img" src="assets/img/dog-2.jpg" alt="dog">
+							</div>
+						  <div class="card-body">
+							  <span class="badge badge-warning mb-2">Vacation</span>
+						    <h4 class="card-title">Woof! How to find dog-friendly beaches in Spain</h4>
+						    <p class="card-text">Considering Spain's abundant coastline, beaches that do allow you to take your pooch to feel sand... </p>
+						  </div>
+						  <div class="card-footer">
+								<a href="#a" class="btn btn-outline-primary">Read More</a>
+						  </div>
+						</div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="component">
+						<div class="card">
+							<div class="card-header">
+						  	<img class="card-img" src="assets/img/dog-3.jpg" alt="dog">
+							</div>
+						  <div class="card-body">
+							  <span class="badge badge-secondary mb-2">Hobby</span>
+						    <h4 class="card-title">Getting Started With Your Puppy</h4>
+						    <p class="card-text">This new addition to your family will require lots of love, attention and plenty of supplies. </p>
+						  </div>
+						  <div class="card-footer">
+								<a href="#a" class="btn btn-outline-primary">Read More</a>
+						  </div>
+						</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- JavaScript Components
+    ================================================== -->
+    <div class="section">
+      <div class="row">
+        <div class="col-md-8 offset-md-2">
+          <div class="header">
+          	<h2 id="tooltips-popovers">Tooltips and Popovers</h2>
+          	<p>Both tooltips and popovers offer an easy way to display more information on hover or click. You must enable them inside your Javascript in order to use them.</p>
+          </div>
+		      <div class="component">
+		        <div class="row">
+		          <div class="col-lg-6">
+			          <p class="lead">Tooltips</p>
+                <!-- Tooltip: Top -->
+                <button type="button" class="btn btn-success mr-1" data-toggle="tooltip" data-placement="top" title="I'm on top!👇 ">Top</button>
+
+                <!-- Tooltip: Bottom -->
+                <button type="button" class="btn btn-success mr-1" data-toggle="tooltip" data-placement="bottom" title="I'm at the bottom! 👆">
+                  Bottom
+                </button>
+                <!-- Tooltip: Left -->
+                <button type="button" class="btn btn-success mr-1" data-toggle="tooltip" data-placement="Left" title="I'm on the left! 👉">
+                  Left
+                </button>
+
+                <!-- Tooltip: Right -->
+                <button type="button" class="btn btn-success mr-1 mt-2 mt-md-0" data-toggle="tooltip" data-placement="right" title="I'm on the right! 👈">
+                  Right
+                </button>
+		          </div>
+		          <div class="col-lg-6">
+			          <p class="lead">Popovers</p>
+                <!-- Popovers: Top -->
+                <button type="button" class="btn btn-secondary mr-1" data-container="body" data-toggle="popover" data-placement="top" data-content="Hey hey hey!">
+                  Top
+                </button>
+
+                <!-- Popovers: Bottom -->
+                <button type="button" class="btn btn-secondary mr-1" data-container="body" data-toggle="popover" data-placement="bottom"
+                  data-content="How you doing?">
+                  Bottom
+                </button>
+
+                <!-- Popovers: Left -->
+                <button type="button" class="btn btn-secondary mr-1" data-container="body" data-toggle="popover" data-placement="left" data-content="Everything is good?">
+                  Left
+                </button>
+
+                <!-- Popovers: Right -->
+                <button type="button" class="btn btn-secondary mr-1 mt-2 mt-md-0" data-container="body" data-toggle="popover" data-placement="right" data-content="Alright!">
+                  Right
+                </button>
+		          </div>
+		        </div>
+					</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="row">
+        <div class="col-md-8 offset-md-2">
+	        <div class="header">
+						<h2 id="modals">Modals</h2>
+						<p>Use the modal plugin to add dialogs to your site for lightboxes, user notifications, or completely custom content.</p>
+	        </div>
+	       	 <div class="component">
+	       	 	<button type="button" class="btn btn-info" data-toggle="modal" data-target="#glassAnimals">
+				 	 		Click for More
+				 	 		</button>
+	       	 </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+
+
+<div class="modal fade" id="glassAnimals" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal-dialog modal-dialog-centered" role="document">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title" id="exampleModalLabel">Here is a modal</h5>
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      Modals are a simple way to display information upon request. They let you easily add another layer upon your site and give you the possibility to create popups.
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      <button type="button" class="btn btn-success">View More</button>
+    </div>
+  </div>
+</div>
+</div>
+
+    
+<!-- <footer class="footer-1 bg-light text-dark">
+<div class="container">
+<div class="d-flex flex-column flex-md-row justify-content-between align-items-center">
+	<div class="links">
+		<ul class="footer-menu list-unstyled d-flex flex-row text-center text-md-left">
+			<li><a href="https://bootstrapbay.com/" target="_blank">Store</a></li>
+			<li><a href="https://bootstrapbay.com/about" target="_blank">About Us</a></li>
+			<li><a href="https://bootstrapbay.com/blog/" target="_blank">Blog</a></li>
+			<li><a href="https://bootstrapbay.com/terms" target="_blank">Terms & Conditions</a></li>
+		</ul>
+	</div>
+	<div class="social mt-4 mt-md-0">
+    <a class="twitter btn btn-outline-primary btn-icon" href="https://twitter.com/bootstrapbay" target="_blank">
+      <i class="fab fa-twitter"></i>
+      <span class="sr-only">View our Twitter Profile</span>
+    </a>
+    <a class="facebook btn btn-outline-primary btn-icon" href="https://www.facebook.com/bootstrapbayofficial/" target="_blank">
+      <i class="fab fa-facebook"></i>
+      <span class="sr-only">View our Facebook Profile
+        <span>
+    </a>
+    <a class="github btn btn-outline-primary btn-icon" href="https://github.com/bootstrapbay" target="_blank">
+      <i class="fab fa-github"></i>
+      <span class="sr-only">View our GitHub Profile</span>
+    </a>
+  </div>
+</div>
+<div class="copyright text-center">
+	<hr />
+	<p class="small">&copy; 2019, made with <span class="text-danger"><i class="fas fa-heart"></i></span> by BootstrapBay</p>
+</div>
+</div>
+</footer> -->
+
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="./assets/vendor/jquery/jquery.min.js"></script>
+    <script src="./assets/vendor/popper/popper.min.js"></script>
+    <script src="./assets/vendor/bootstrap/bootstrap.min.js" ></script>
+
+    <!-- optional plugins -->
+    <script src="./assets/vendor/nouislider/js/nouislider.min.js"></script>
+
+    <!--   lazy javascript -->
+    <script src="./assets/js/lazy.js"></script>
+  </body>
 </html>
