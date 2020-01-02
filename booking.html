@@ -13,6 +13,16 @@
 		<link rel="stylesheet" href="./assets/css/lazy.css">
 		<link rel="stylesheet" href="./assets/css/demo.css">
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css" integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h" crossorigin="anonymous">
+		<script type="text/javascript">
+			function CheckChildren(val){
+			 var element=document.getElementById('childAgeGroup-1');
+			 if(val=='1'||val=='2')
+			   element.style.display='block';
+			 else  
+			   element.style.display='none';
+			}
+			
+			</script> 
   </head>
   <body class="register">
     <nav class="navbar navbar-expand-md navbar-transparent navbar-light">
@@ -33,23 +43,19 @@
 	  <div class="col-12 col-md-4 offset-md-1">
 				  <div class="register-form">
 					  <div class="mb-5">
-						  <h1>Register</h1>
-						  <p class="lead">Create an account to start playing.</p>
+						  <h1>Flight Booking</h1>
+						  <p class="lead">Locate your flight using the options below.</p>
 					  </div>
 					  <form action="" method="post" class="trip-form">
-							<fieldset class="radio-group">
-							 <label for="one-way" class="bold-type">
-							   <input type="radio" id="one-way" name="trip-type" value="oneWay" />
-							   One Way 
-							</label>
-							<label for="round-trip" class="bold-type">
-							  <input type="radio" id="round-trip" name="trip-type" value="roundTrip" checked="checked" />
-							  Round trip
-							</label>
-							<label for="multi-city" class="bold-type">
-							  <input type="radio" id="multi-city" name="trip-type" value="multiCity" />
-							  Multi City
-							</label>
+							<fieldset class="form-group">
+									<div class="custom-control custom-radio my-2">
+											<input type="radio" id="one-way" name="flight-type" class="custom-control-input">
+											<label class="custom-control-label" for="one-way">One Way</label>
+										  </div>
+										  <div class="custom-control custom-radio my-2">
+												<input type="radio" id="round-trip" name="flight-type" class="custom-control-input" checked>
+												<label class="custom-control-label" for="round-trip">Roundtrip</label>
+										  </div>
 						  </fieldset>
 							
 							<fieldset>
@@ -65,18 +71,18 @@
 							<fieldset>
 							  <div class="form-group">
 								<label for="depart" class="bold-type">Depart on</label>
-								<input class="form-control" placeholder="Pick a date" type="date" name="depart" />
+								<input class="form-control" id="flight-departing-flp" placeholder="Pick a date" type="date" name="depart" />
 							  </div>
 							  <div class="form-group">
 								<label for="return" class="bold-type">Return on</label>
-								<input class="form-control" placeholder="Pick a date" type="date" name="return" />
+								<input class="form-control" id="flight-returning-flp" placeholder="Pick a date" type="date" name="return" />
 							  </div>
 							</fieldset>
 							
 							<fieldset>
 							  <div class="form-group">
 								<label for="adults" class="bold-type">Adults</label> 
-								<select name="adults" class="form-control ticket-count">
+								<select name="adults" class="form-control ticket-count" id="flight-adults-flp">
 								  <option value="1">1</option>
 								  <option value="2">2</option>
 								  <option value="3">3</option>
@@ -84,9 +90,10 @@
 								  <option value="5">3</option>
 								</select>
 							  </div>
+							  <!-- Need to add chidren ages on click -->
 							   <div class="form-group">
 								<label for="children">Children</label>
-								 <select name="children" class="form-control ticket-count">
+								 <select name="children" class="form-control ticket-count" id="flight-chidren-flp" onchange='CheckColors(this.value);'>
 								   <option value="0">0</option>
 								   <option value="1">1</option>
 								   <option value="2">2</option>
@@ -94,8 +101,19 @@
 								   <option value="4">3</option>
 								   <option value="5">3</option>
 								 </select>
-								 <small id="childAgeHelp" class="form-text text-info">2&hyphen;11 years</small>
+								 <small id="childAgeHelp" class="form-text text-info">2&hyphen;12 years</small>
 							  </div>
+							  <!-- <div class="form-group" id="childAgeGroup-1">
+									<label for="childrenAge1">Age of First Child</label>
+									 <select name="childrenAge1" class="form-control ticket-count" id="flight-age-select-1-flp">
+									   <option value="0">0</option>
+									   <option value="1">1</option>
+									   <option value="2">2</option>
+									   <option value="3">3</option>
+									   <option value="4">3</option>
+									   <option value="5">3</option>
+									 </select>
+								  </div> -->
 							   <div class="form-group">
 								<label for="infants">Infants</label>
 								 <select name="children" class="form-control ticket-count">
@@ -127,7 +145,7 @@
 							</details> 
 							</fieldset>
 							
-							<input class="search-btn" type="submit" value="Search flights"/>
+							<button type="submit" class="btn btn-block btn-primary">Search Flights</button>
 						  </form>
 					  <form>
 						  <div class="form-group">
