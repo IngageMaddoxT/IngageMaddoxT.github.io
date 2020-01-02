@@ -38,16 +38,19 @@
                     href="http://toolsqa.com/automation-practice-table/"><strong>Link Test</strong></a></div>
             <div>&nbsp;</div>
             <div>&nbsp;</div>
-            <div class="control-group"><strong>First name:</strong> <input name="firstname" type="text"
+            <div class="control-group"><strong>First name:</strong> <input name="firstname" type="text" class="form-control"
                     style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABHklEQVQ4EaVTO26DQBD1ohQWaS2lg9JybZ+AK7hNwx2oIoVf4UPQ0Lj1FdKktevIpel8AKNUkDcWMxpgSaIEaTVv3sx7uztiTdu2s/98DywOw3Dued4Who/M2aIx5lZV1aEsy0+qiwHELyi+Ytl0PQ69SxAxkWIA4RMRTdNsKE59juMcuZd6xIAFeZ6fGCdJ8kY4y7KAuTRNGd7jyEBXsdOPE3a0QGPsniOnnYMO67LgSQN9T41F2QGrQRRFCwyzoIF2qyBuKKbcOgPXdVeY9rMWgNsjf9ccYesJhk3f5dYT1HX9gR0LLQR30TnjkUEcx2uIuS4RnI+aj6sJR0AM8AaumPaM/rRehyWhXqbFAA9kh3/8/NvHxAYGAsZ/il8IalkCLBfNVAAAAABJRU5ErkJggg==&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%; cursor: auto;">
             </div>
             <div>&nbsp;</div>
             <div>&nbsp;</div>
-            <div class="control-group"><strong>Last name:</strong> <input id="lastname" type="text"></div>
+            <div class="control-group"><strong>Last name:</strong> <input id="lastname" type="text" class="form-control"></div>
             <div>&nbsp;</div>
             <div>&nbsp;</div>
             <p><button id="buttonwithclass" class="btn" name="submit">Simple Button</button><br></p>
-            <div class="control-group"><strong><label>Sex</label></strong> <input id="sex-0" name="sex" type="radio"
+            <div>&nbsp;</div>
+            <div>&nbsp;</div>
+            <div class="control-group"><strong><label>Sex</label></strong> 
+                <input id="sex-0" name="sex" type="radio"
                     value="Male">&nbsp; Male&nbsp;&nbsp;&nbsp; <input id="sex-1" name="sex" type="radio"
                     value="Female"><label class="radio" for="sex-1"> Female</label></div>
             <div>&nbsp;</div>
@@ -55,13 +58,42 @@
             <p></p>
             <div>&nbsp;</div>
             <div class="control-group"><strong><label class="control-label" for="exp">Years of
-                        Experience</label></strong> <input id="exp-0" name="exp" type="radio"
-                    value="1">1&nbsp;&nbsp;&nbsp; <input id="exp-1" name="exp" type="radio"
-                    value="2">2&nbsp;&nbsp;&nbsp; <input id="exp-2" name="exp" type="radio" value="3">3 &nbsp;&nbsp;
-                <input id="exp-3" name="exp" type="radio" value="4">4 &nbsp;&nbsp; <input id="exp-4" name="exp"
-                    type="radio" value="5">5 &nbsp;&nbsp; <input id="exp-5" name="exp" type="radio" value="6">6
-                &nbsp;&nbsp; <input id="exp-6" name="exp" type="radio" value="7"><label class="radio inline"
-                    for="exp-6">7</label></div>
+                        Experience</label></strong> 
+                        <div class="custom-control custom-radio my-2">
+                                <input id="exp-0" name="exp" type="radio"
+                                value="1" class="custom-control-input" >
+                                <label class="custom-control-label" for="exp-0">1</label>
+                        </div>
+                        <div class="custom-control custom-radio my-2">
+                                <input id="exp-1" name="exp" type="radio"
+                                value="2" class="custom-control-input" >
+                                <label class="custom-control-label" for="exp-1">2</label>
+                        </div>
+                        <div class="custom-control custom-radio my-2">
+                                <input id="exp-2" name="exp" type="radio"
+                                value="3" class="custom-control-input" >
+                                <label class="custom-control-label" for="exp-2">3</label>
+                        </div>
+                        <div class="custom-control custom-radio my-2">
+                                <input id="exp-3" name="exp" type="radio"
+                                value="4" class="custom-control-input" >
+                                <label class="custom-control-label" for="exp-3">4</label>
+                        </div>
+                        <div class="custom-control custom-radio my-2">
+                                <input id="exp-4" name="exp" type="radio"
+                                value="5" class="custom-control-input" >
+                                <label class="custom-control-label" for="exp-4">5</label>
+                        </div>
+                        <div class="custom-control custom-radio my-2">
+                                <input id="exp-5" name="exp" type="radio"
+                                value="6" class="custom-control-input">
+                                <label class="custom-control-label" for="exp-5">6</label>
+                        </div>
+                        <div class="custom-control custom-radio my-2">
+                                <input id="exp-6" name="exp" type="radio"
+                                value="7" class="custom-control-input" checked>
+                                <label class="radio inline custom-control-label" for="exp-6">7</label>
+                        </div></div>
             <div>&nbsp;</div>
             <p>&nbsp;</p>
             <p>Date: <input id="datepicker" type="text"></p>

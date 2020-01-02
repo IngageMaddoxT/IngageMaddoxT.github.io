@@ -4,8 +4,45 @@
 
 .main-section {
     margin-top: 56px;
+    margin-bottom: 56px;
 }
 
 .main-section .component {
     margin-bottom: 20px;
 }
+
+/* Mega Menu ----------------------- */
+
+.megamenu {
+  position: static !important;
+}
+
+.megamenu .dropdown-menu {
+  background: none !important;
+  border: none !important;
+  width: 100% !important;
+}
+/* .megamenu:hover>.dropdown-menu {
+  display: block !important;
+} */
+
+.dropdown>.dropdown-menu {
+    top: 200% !important;
+    transition: 0.3s all ease-in-out !important;
+  }
+  .dropdown:hover>.dropdown-menu {
+    display: block !important;
+    top: 80% !important;
+  }
+
+  /* Shopping */
+  .container-shopping {
+      margin-bottom: 10%;
+  }
+  .vertical-filters-header {
+      font-weight: bold;
+      margin-left: -20px;
+  }
+  .categories-list {
+      margin-top: 10px;
+  }
