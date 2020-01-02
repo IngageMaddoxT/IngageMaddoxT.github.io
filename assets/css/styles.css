@@ -46,3 +46,18 @@
   .categories-list {
       margin-top: 10px;
   }
+
+  /*Flight Booking */
+  input[type="date"] {
+    background:#fff url(https://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/calendar_2.png)  95% 50% no-repeat ;
+    height: 36px;
+    border: 1px solid #dcdcdc;
+    outline: none;
+  }
+  input[type="date"]::-webkit-inner-spin-button {
+    display: none;
+  }
+  input[type="date"]::-webkit-calendar-picker-indicator {
+    opacity: 0;
+  }
+  

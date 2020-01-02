@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>QA - Tools</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <link href="assets/img/favicon_io/favicon.ico" rel="icon" type="image/png">
+    
+	<link rel="stylesheet" href="./assets/vendor/bootstrap/bootstrap.min.css">
+	<link rel="stylesheet" href="./assets/css/styles.css">
+		<link rel="stylesheet" href="./assets/css/lazy.css">
+		<link rel="stylesheet" href="./assets/css/demo.css">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css" integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h" crossorigin="anonymous">
+  </head>
+  <body class="register">
+    <nav class="navbar navbar-expand-md navbar-transparent navbar-light">
+    <div class="container-fluid">
+	    <div class="row">
+		    <div class="col-md-2 offset-md-1 d-flex justify-content-between">
+	        <a class="navbar-brand text-dark d-flex align-items-center" href="index.html"><img src="assets/img/ingage-arrow.png" alt="QA Tools Arrow" height="25" class="mr-2"> QA - Tools</a>
+	        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown-7" aria-controls="navbarNavDropdown-7"
+	          aria-expanded="false" aria-label="Toggle navigation">
+	          <span class="navbar-toggler-icon"></span>
+	        </button>
+		    </div>
+	    </div>
+    </div>
+  </nav>
+<div class="container-fluid">
+  <div class="row">
+	  <div class="col-12 col-md-4 offset-md-1">
+				  <div class="register-form">
+					  <div class="mb-5">
+						  <h1>Register</h1>
+						  <p class="lead">Create an account to start playing.</p>
+					  </div>
+					  <form action="" method="post" class="trip-form">
+							<fieldset class="radio-group">
+							 <label for="one-way" class="bold-type">
+							   <input type="radio" id="one-way" name="trip-type" value="oneWay" />
+							   One Way 
+							</label>
+							<label for="round-trip" class="bold-type">
+							  <input type="radio" id="round-trip" name="trip-type" value="roundTrip" checked="checked" />
+							  Round trip
+							</label>
+							<label for="multi-city" class="bold-type">
+							  <input type="radio" id="multi-city" name="trip-type" value="multiCity" />
+							  Multi City
+							</label>
+						  </fieldset>
+							
+							<fieldset>
+							  <div class="form-group">
+								<label for="from" class="bold-type">Flight Origin </label>
+								<input id="flight-origin-flp" class="form-control" type="text" name="from" maxlength="100" placeholder="Any world wide city or airport">
+							  </div>
+							  <div class="form-group">
+								<label for="to" class="bold-type">Flight Destination </label>
+								<input id="flight-destination-flp" class="form-control" type="text" name="to"  maxlength="100" placeholder="Any world wide city or airport">
+							  </div>
+							</fieldset>
+							<fieldset>
+							  <div class="form-group">
+								<label for="depart" class="bold-type">Depart on</label>
+								<input class="form-control" placeholder="Pick a date" type="date" name="depart" />
+							  </div>
+							  <div class="form-group">
+								<label for="return" class="bold-type">Return on</label>
+								<input class="form-control" placeholder="Pick a date" type="date" name="return" />
+							  </div>
+							</fieldset>
+							
+							<fieldset>
+							  <div class="form-group">
+								<label for="adults" class="bold-type">Adults</label> 
+								<select name="adults" class="form-control ticket-count">
+								  <option value="1">1</option>
+								  <option value="2">2</option>
+								  <option value="3">3</option>
+								  <option value="4">3</option>
+								  <option value="5">3</option>
+								</select>
+							  </div>
+							   <div class="form-group">
+								<label for="children">Children</label>
+								 <select name="children" class="form-control ticket-count">
+								   <option value="0">0</option>
+								   <option value="1">1</option>
+								   <option value="2">2</option>
+								   <option value="3">3</option>
+								   <option value="4">3</option>
+								   <option value="5">3</option>
+								 </select>
+								 <small id="childAgeHelp" class="form-text text-info">2&hyphen;11 years</small>
+							  </div>
+							   <div class="form-group">
+								<label for="infants">Infants</label>
+								 <select name="children" class="form-control ticket-count">
+								   <option value="0">0</option>
+								   <option value="1">1</option>
+								   <option value="2">2</option>
+								   <option value="3">3</option>
+								   <option value="4">3</option>
+								   <option value="5">3</option>
+								 </select>
+								 <small id="adultAgeHelp" class="form-text text-info">Below 2 yrs</small>
+							  </div>
+							</fieldset>
+							<fieldset class="more-option">
+							  <details>
+								<summary class="more-link"> <b>More options: </b>Class of travel, Airline Preference</summary>
+								 <div class="form-group">
+								<label for="class-of-travel">Class of travel</label>
+								<select name="class-of-travel" class="travel-class-select">
+								  <option value="economy">Economy</option>
+								  <option value="business">Business class</option>
+								  <option value="firstClass">First class</option>
+								</select>
+							  </div>
+							  <div class="form-group">
+								<label for="airline-name">Preferred Airline</label> 
+								<input class="airline-name" type="text" name="airline-name" size="30" maxlength="100" placeholder="Airline name"/> 
+							  </div>
+							</details> 
+							</fieldset>
+							
+							<input class="search-btn" type="submit" value="Search flights"/>
+						  </form>
+					  <form>
+						  <div class="form-group">
+						    <label for="exampleInputEmail1">Email address</label>
+						    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+						    <small id="emailHelp" class="form-text text-info">We'll never share your email with anyone else.</small>
+						  </div>
+						  <div class="form-group">
+						    <label for="exampleInputPassword1">Password</label>
+						    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+						  </div>
+						  <div class="form-group">
+						    <label for="exampleInputPassword1">Password Confirmation</label>
+						    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+						  </div>
+              <div class="custom-control custom-checkbox my-4">
+                <input type="checkbox" class="custom-control-input" id="customCheck2">
+                <label class="custom-control-label" for="customCheck2">Remember me</label>
+              </div>
+						  <button type="submit" class="btn btn-block btn-primary">Submit</button>
+						</form>
+
+						<p class="small my-4 text-center">Already have an account? <a href="#a">Log in</a>.</p>
+		  		</div>
+	  </div>
+	  <div class="col-12 col-md-6 offset-md-1 d-flex">
+		  <div class="full-picture flex-grow-1">
+		  </div>
+	  </div>
+  </div>
+</div>
+
+    
+<!-- <footer class="footer-1 bg-light text-dark">
+<div class="container">
+<div class="d-flex flex-column flex-md-row justify-content-between align-items-center">
+	<div class="links">
+		<ul class="footer-menu list-unstyled d-flex flex-row text-center text-md-left">
+			<li><a href="https://bootstrapbay.com/" target="_blank">Store</a></li>
+			<li><a href="https://bootstrapbay.com/about" target="_blank">About Us</a></li>
+			<li><a href="https://bootstrapbay.com/blog/" target="_blank">Blog</a></li>
+			<li><a href="https://bootstrapbay.com/terms" target="_blank">Terms & Conditions</a></li>
+		</ul>
+	</div>
+	<div class="social mt-4 mt-md-0">
+    <a class="twitter btn btn-outline-primary btn-icon" href="https://twitter.com/bootstrapbay" target="_blank">
+      <i class="fab fa-twitter"></i>
+      <span class="sr-only">View our Twitter Profile</span>
+    </a>
+    <a class="facebook btn btn-outline-primary btn-icon" href="https://www.facebook.com/bootstrapbayofficial/" target="_blank">
+      <i class="fab fa-facebook"></i>
+      <span class="sr-only">View our Facebook Profile
+        <span>
+    </a>
+    <a class="github btn btn-outline-primary btn-icon" href="https://github.com/bootstrapbay" target="_blank">
+      <i class="fab fa-github"></i>
+      <span class="sr-only">View our GitHub Profile</span>
+    </a>
+  </div>
+</div>
+<div class="copyright text-center">
+	<hr />
+	<p class="small">&copy; 2019, made with <span class="text-danger"><i class="fas fa-heart"></i></span> by BootstrapBay</p>
+</div>
+</div>
+</footer> -->
+
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="./assets/vendor/jquery/jquery.min.js"></script>
+    <script src="./assets/vendor/popper/popper.min.js"></script>
+    <script src="./assets/vendor/bootstrap/bootstrap.min.js" ></script>
+
+    <!-- optional plugins -->
+    <script src="./assets/vendor/nouislider/js/nouislider.min.js"></script>
+
+    <!--   lazy javascript -->
+    <script src="./assets/js/lazy.js"></script>
+  </body>
+</html>
