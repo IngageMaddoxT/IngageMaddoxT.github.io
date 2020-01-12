@@ -60,4 +60,26 @@
   input[type="date"]::-webkit-calendar-picker-indicator {
     opacity: 0;
   }
+  .childAgeGroup {
+    display: none;
+  }
+  .more-option {
+    margin-bottom: 5%;
+  }
+  .full-picture-booking {
+    min-height:100vh;margin-right:-15px;overflow:hidden;background-image:url("../img/airplane.png");background-position:center center;background-size:cover;position:relative;width:100%;z-index:1;
+  }
+
+    /* Automation Form */
+    .button {
+      margin-bottom: 2%;
+    }
+  .alert-content {
+    margin-bottom: 5%;
+  }
+
+  /*Calendar*/
+  .calendar-container {
+    margin-top: 5%;
+  }
   

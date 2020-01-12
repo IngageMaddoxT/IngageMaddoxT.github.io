@@ -15,13 +15,19 @@
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css" integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h" crossorigin="anonymous">
 		<script type="text/javascript">
 			function CheckChildren(val){
-			 var element=document.getElementById('childAgeGroup-1');
-			 if(val=='1'||val=='2')
-			   element.style.display='block';
+			 if(val=='1' || val=='2' || val=='3')
+			 document.getElementById('childAgeGroup-1').style.display='block';
 			 else  
-			   element.style.display='none';
-			}
-			
+			 document.getElementById('childAgeGroup-1').style.display='none';
+			 if(val=='2' || val=='3' || val=='4' || val=='5')
+			 document.getElementById('childAgeGroup-2').style.display='block';
+			 else  
+			 document.getElementById('childAgeGroup-2').style.display='none';
+			 if(val=='3' || val=='4' || val=='5')
+			 document.getElementById('childAgeGroup-3').style.display='block';
+			 else  
+			 document.getElementById('childAgeGroup-3').style.display='none';
+			}		
 			</script> 
   </head>
   <body class="register">
@@ -86,132 +92,101 @@
 								  <option value="1">1</option>
 								  <option value="2">2</option>
 								  <option value="3">3</option>
-								  <option value="4">3</option>
-								  <option value="5">3</option>
+								  <option value="4">4</option>
+								  <option value="5">5</option>
 								</select>
 							  </div>
 							  <!-- Need to add chidren ages on click -->
 							   <div class="form-group">
 								<label for="children">Children</label>
-								 <select name="children" class="form-control ticket-count" id="flight-chidren-flp" onchange='CheckColors(this.value);'>
+								 <select name="children" class="form-control ticket-count" id="flight-chidren-flp" onchange='CheckChildren(this.value);'>
 								   <option value="0">0</option>
 								   <option value="1">1</option>
 								   <option value="2">2</option>
 								   <option value="3">3</option>
-								   <option value="4">3</option>
-								   <option value="5">3</option>
 								 </select>
 								 <small id="childAgeHelp" class="form-text text-info">2&hyphen;12 years</small>
 							  </div>
-							  <!-- <div class="form-group" id="childAgeGroup-1">
+							  <div class="form-group childAgeGroup" id="childAgeGroup-1">
 									<label for="childrenAge1">Age of First Child</label>
 									 <select name="childrenAge1" class="form-control ticket-count" id="flight-age-select-1-flp">
-									   <option value="0">0</option>
-									   <option value="1">1</option>
 									   <option value="2">2</option>
 									   <option value="3">3</option>
-									   <option value="4">3</option>
-									   <option value="5">3</option>
+									   <option value="4">4</option>
+									   <option value="5">5</option>
+									   <option value="6">6</option>
+									   <option value="7">7</option>
+									   <option value="8">8</option>
+									   <option value="9">9</option>
+									   <option value="10">10</option>
+									   <option value="11">11</option>
+									   <option value="12">12</option>
 									 </select>
-								  </div> -->
-							   <div class="form-group">
-								<label for="infants">Infants</label>
-								 <select name="children" class="form-control ticket-count">
-								   <option value="0">0</option>
-								   <option value="1">1</option>
-								   <option value="2">2</option>
-								   <option value="3">3</option>
-								   <option value="4">3</option>
-								   <option value="5">3</option>
-								 </select>
-								 <small id="adultAgeHelp" class="form-text text-info">Below 2 yrs</small>
-							  </div>
+									 <small id="childAgeHelp" class="form-text text-info">2&hyphen;12 years</small>
+								  </div>
+								  <div class="form-group childAgeGroup" id="childAgeGroup-2">
+									<label for="childrenAge2">Age of Second Child</label>
+									 <select name="childrenAge2" class="form-control ticket-count" id="flight-age-select-2-flp">
+									   <option value="2">2</option>
+									   <option value="3">3</option>
+									   <option value="4">4</option>
+									   <option value="5">5</option>
+									   <option value="6">6</option>
+									   <option value="7">7</option>
+									   <option value="8">8</option>
+									   <option value="9">9</option>
+									   <option value="10">10</option>
+									   <option value="11">11</option>
+									   <option value="12">12</option>
+									 </select>
+									 <small id="childAgeHelp" class="form-text text-info">2&hyphen;12 years</small>
+								  </div>
+								  <div class="form-group childAgeGroup" id="childAgeGroup-3">
+									<label for="childrenAge3">Age of Third Child</label>
+									 <select name="childrenAge3" class="form-control ticket-count" id="flight-age-select-3-flp">
+									   <option value="2">2</option>
+									   <option value="3">3</option>
+									   <option value="4">4</option>
+									   <option value="5">5</option>
+									   <option value="6">6</option>
+									   <option value="7">7</option>
+									   <option value="8">8</option>
+									   <option value="9">9</option>
+									   <option value="10">10</option>
+									   <option value="11">11</option>
+									   <option value="12">12</option>
+									 </select>
+									 <small id="childAgeHelp" class="form-text text-info">2&hyphen;12 years</small>
+								  </div>
 							</fieldset>
 							<fieldset class="more-option">
 							  <details>
 								<summary class="more-link"> <b>More options: </b>Class of travel, Airline Preference</summary>
 								 <div class="form-group">
 								<label for="class-of-travel">Class of travel</label>
-								<select name="class-of-travel" class="travel-class-select">
+								<select name="class-of-travel" class="form-control">
 								  <option value="economy">Economy</option>
 								  <option value="business">Business class</option>
 								  <option value="firstClass">First class</option>
 								</select>
 							  </div>
 							  <div class="form-group">
-								<label for="airline-name">Preferred Airline</label> 
-								<input class="airline-name" type="text" name="airline-name" size="30" maxlength="100" placeholder="Airline name"/> 
+								<label for="airline-name" class="bold-type">Preferred Airline</label> 
+								<input class="form-control" type="text" name="airline-name" size="30" maxlength="100" placeholder="Airline name"/> 
 							  </div>
 							</details> 
 							</fieldset>
 							
-							<button type="submit" class="btn btn-block btn-primary">Search Flights</button>
+							<button type="submit" class="btn btn-block btn-primary" id="gcw-flights-form-flp">Search Flights</button>
 						  </form>
-					  <form>
-						  <div class="form-group">
-						    <label for="exampleInputEmail1">Email address</label>
-						    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-						    <small id="emailHelp" class="form-text text-info">We'll never share your email with anyone else.</small>
-						  </div>
-						  <div class="form-group">
-						    <label for="exampleInputPassword1">Password</label>
-						    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-						  </div>
-						  <div class="form-group">
-						    <label for="exampleInputPassword1">Password Confirmation</label>
-						    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-						  </div>
-              <div class="custom-control custom-checkbox my-4">
-                <input type="checkbox" class="custom-control-input" id="customCheck2">
-                <label class="custom-control-label" for="customCheck2">Remember me</label>
-              </div>
-						  <button type="submit" class="btn btn-block btn-primary">Submit</button>
-						</form>
-
-						<p class="small my-4 text-center">Already have an account? <a href="#a">Log in</a>.</p>
 		  		</div>
 	  </div>
 	  <div class="col-12 col-md-6 offset-md-1 d-flex">
-		  <div class="full-picture flex-grow-1">
+		  <div class="full-picture-booking flex-grow-1">
 		  </div>
 	  </div>
   </div>
 </div>
-
-    
-<!-- <footer class="footer-1 bg-light text-dark">
-<div class="container">
-<div class="d-flex flex-column flex-md-row justify-content-between align-items-center">
-	<div class="links">
-		<ul class="footer-menu list-unstyled d-flex flex-row text-center text-md-left">
-			<li><a href="https://bootstrapbay.com/" target="_blank">Store</a></li>
-			<li><a href="https://bootstrapbay.com/about" target="_blank">About Us</a></li>
-			<li><a href="https://bootstrapbay.com/blog/" target="_blank">Blog</a></li>
-			<li><a href="https://bootstrapbay.com/terms" target="_blank">Terms & Conditions</a></li>
-		</ul>
-	</div>
-	<div class="social mt-4 mt-md-0">
-    <a class="twitter btn btn-outline-primary btn-icon" href="https://twitter.com/bootstrapbay" target="_blank">
-      <i class="fab fa-twitter"></i>
-      <span class="sr-only">View our Twitter Profile</span>
-    </a>
-    <a class="facebook btn btn-outline-primary btn-icon" href="https://www.facebook.com/bootstrapbayofficial/" target="_blank">
-      <i class="fab fa-facebook"></i>
-      <span class="sr-only">View our Facebook Profile
-        <span>
-    </a>
-    <a class="github btn btn-outline-primary btn-icon" href="https://github.com/bootstrapbay" target="_blank">
-      <i class="fab fa-github"></i>
-      <span class="sr-only">View our GitHub Profile</span>
-    </a>
-  </div>
-</div>
-<div class="copyright text-center">
-	<hr />
-	<p class="small">&copy; 2019, made with <span class="text-danger"><i class="fas fa-heart"></i></span> by BootstrapBay</p>
-</div>
-</div>
-</footer> -->
 
 
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
