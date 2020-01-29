@@ -10,9 +10,14 @@
 .main-section .component {
     margin-bottom: 20px;
 }
+.logo-home-banner {
+  margin-bottom: 3%;
+}
 
-/* Mega Menu ----------------------- */
-
+/* Mega Menu - Shopping ----------------------- */
+.navbar-megamenu {
+  margin-top: 116px;
+}
 .megamenu {
   position: static !important;
 }
