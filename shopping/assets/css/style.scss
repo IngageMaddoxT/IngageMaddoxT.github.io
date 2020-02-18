@@ -96,8 +96,9 @@
 	}
 
 	.cd-cart--open &:hover + .cd-cart__content .cd-cart__layout {
-		box-shadow: 0 4px 30px rgba(#000, .17);
-	}
+    box-shadow: 0 4px 30px rgba(#000, .17);
+    color: white;
+  }
 }
 
 .cd-cart__count { // number of items indicator
@@ -605,7 +606,7 @@ body {
   text-transform: uppercase;
   font-weight: 700;
   letter-spacing: .1em;
-  text-decoration: none;
+  text-decoration: none !important;
   font-size: var(--text-sm);
   transition: all .2s;
 }
