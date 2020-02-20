@@ -88,3 +88,82 @@
     margin-top: 5%;
   }
   
+  /*Booking Thank You*/
+  .flight {
+    position: relative;
+    display: inline-block;
+  }
+  .flight--selected .flight__ticket {
+    stroke: #00B7F0;
+  }
+  .flight p {
+    margin: 0;
+  }
+  .flight__direction {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  .flight__bg {
+    position: relative;
+  }
+  .flight__info {
+    position: absolute;
+    padding: 50px 70px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+  .flight__details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .flight__out {
+    padding-bottom: 20px;
+    border-bottom: thin solid #e6e6e6;
+  }
+  .flight__in {
+    padding: 20px 0 30px;
+    border-bottom: thin dashed #e6e6e6;
+  }
+  .flight__logo {
+    flex: 0 1 auto;
+    margin-right: 40px;
+  }
+  .flight__time {
+    margin-bottom: 5px;
+    font-size: 24px;
+    display: block;
+  }
+  .flight__airport {
+    font-size: 18px;
+  }
+  .flight__path {
+    flex: 1 1 auto;
+    text-align: center;
+    font-size: 16px;
+  }
+  .flight__path > span {
+    display: block;
+  }
+  .flight__footer {
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .flight__price {
+    margin-left: auto;
+    margin-right: 30px;
+    font-weight: bold;
+  }
+  .flight .btn {
+    background: #00B7F0;
+    border-radius: 5px;
+    padding: 15px 40px;
+    color: #fff;
+    display: inline-block;
+    text-align: center;
+  }
+  
