@@ -6,8 +6,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&family=Roboto:wght@400;500&display=swap"
         rel="stylesheet">
     <style>
-        @import "compass/css3";
-
         body {
             color: #404040;
             font: 100 1em/150% "proxima-nova", Helvetica, sans-serif;
@@ -65,6 +63,7 @@
             display: flex;
             flex-flow: row;
             flex-wrap: wrap;
+            justify-content: space-between;
         }
 
         .u-textCenter {
@@ -80,7 +79,7 @@
             margin-bottom: 1em;
             background: rgba(51, 153, 204, 0.2);
             transition: background-color 0.3s ease;
-            border: 1px solid #33cccc;
+            /* border: 1px solid #33cccc; */
             border-radius: 3px;
         }
 
@@ -253,7 +252,7 @@
         /* Tablet (medium) screens */
         @media (min-width: 768px) {
             .Grid--cols-4>.Grid-cell {
-                /* flex: 0 0 calc(50% - 1em); */
+                flex: 0 0 calc(100% - 1em);
             }
 
             .Grid--cols-6>.Grid-cell {
@@ -294,6 +293,7 @@
             .Grid--cols-6>.Grid-cell,
             .Grid--cols-12>.Grid-cell {
                 flex: 1;
+                flex-basis: 45%;
             }
 
             .Grid--holly-grail .main {
@@ -364,7 +364,7 @@
 
     <style>
         .grid-item-content {
-            padding: 0 20px 20px 20px;
+            padding: 20px 20px 20px 20px;
         }
 
         .item-title {
@@ -428,6 +428,18 @@
         .grow-connect {
             background-color: #F8D979;
         }
+
+        .accelerator {
+            background-color: #EFAD8B;
+        }
+
+        .people {
+            background-color: #F87979;
+        }
+
+        .shared-services {
+            background-color: #F0F2F3;
+        }
     </style>
 
     <style>
@@ -441,13 +453,26 @@
             font-size: 0.9em;
         }
 
-        .session-info {
-            font-family: 'Roboto', sans-serif;
-            font-size: 4em;
+        .session-info-header {
+            padding-top: 50px;
         }
 
-        .item-title {
-            font-size: 3em;
+        .session-info {
+            font-family: 'Roboto', sans-serif;
+            font-size: 24px;
+            display: block;
+            margin-top: 10px;
+            margin-bottom: 30px;
+        }
+
+        @media (max-width: 768px) {
+            .item-title {
+                font-size: 3em;
+            }
+
+            .session-info {
+                font-size: 2em;
+            }
         }
     </style>
 </head>
@@ -471,8 +496,9 @@
                     <div class="grid-item-content">
                         <span class="item-title">Deliver</span>
                         <span class="item-category">Dev Practice Area</span>
-                        <span class="item-excerpt">Brian Samson & Charlie Retzler</span>
-                        <span class="more-info">River View 3rd Floor (1:30 - 1:55)</span>
+                        <span class="item-excerpt">Brian S & Charlie R</span>
+                        <span class="more-info">River View 3rd Floor</span>
+                        <span class="more-info">(1:30 - 1:55)</span>
                     </div>
                 </div>
             </div>
@@ -481,8 +507,9 @@
                     <div class="grid-item-content">
                         <span class="item-title">Deliver</span>
                         <span class="item-category">QA Practice Area</span>
-                        <span class="item-excerpt">Chris Dolan & David Howard</span>
-                        <span class="more-info">Training Room 3rd Floor (1:30 - 1:55)</span>
+                        <span class="item-excerpt">Chris D & David H</span>
+                        <span class="more-info">Training Room 3rd Floor</span>
+                        <span class="more-info">(1:30 - 1:55)</span>
                     </div>
                 </div>
             </div>
@@ -491,8 +518,9 @@
                     <div class="grid-item-content">
                         <span class="item-title">Client Success</span>
                         <span class="item-category">&nbsp;</span>
-                        <span class="item-excerpt">Leslie Peterson & Adam Kenter</span>
-                        <span class="more-info">Second Floor (1:30 - 1:55)</span>
+                        <span class="item-excerpt">Leslie P & Adam K</span>
+                        <span class="more-info">Second Floor</span>
+                        <span class="more-info">(1:30 - 1:55)</span>
                     </div>
                 </div>
             </div>
@@ -501,8 +529,65 @@
                     <div class="grid-item-content">
                         <span class="item-title">Grow & Connect</span>
                         <span class="item-category"> &nbsp;</span>
-                        <span class="item-excerpt">Tony Maddox</span>
-                        <span class="more-info">First Floor (1:30 - 1:55)</span>
+                        <span class="item-excerpt">Tony M</span>
+                        <span class="more-info">First Floor</span>
+                        <span class="more-info">(1:30 - 1:55)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Session 2 -->
+        <div class="Grid Grid--full u-textCenter session-info-header">
+            <div class="Grid-cell">
+                <div class="Demo">
+                    <span class="session-info">Session 2 (2:05 - 2:30)</span>
+                </div>
+            </div>
+        </div>
+        <div class="Grid Grid--gutters Grid--cols-4 u-textCenter">
+            <div class="Grid-cell">
+                <div class="Demo accelerator">
+                    <div class="grid-item-content">
+                        <span class="item-title">Thrive Accelerator</span>
+                        <span class="item-category">&nbsp;</span>
+                        <span class="item-excerpt">Elena T & Kelly D</span>
+                        <span class="more-info">River View 3rd Floor</span>
+                        <span class="more-info">(2:05 - 2:30)</span>
+                    </div>
+                </div>
+            </div>
+            <div class="Grid-cell">
+                <div class="Demo people">
+                    <div class="grid-item-content">
+                        <span class="item-title">People</span>
+                        <span class="item-category">&nbsp;</span>
+                        <span class="item-excerpt">Kelly W</span>
+                        <span class="more-info">Training Room 3rd Floor</span>
+                        <span class="more-info">(2:05 - 2:30)</span>
+                    </div>
+                </div>
+            </div>
+            <div class="Grid-cell">
+                <div class="Demo deliver">
+                    <div class="grid-item-content">
+                        <span class="item-title">Delivery</span>
+                        <span class="item-category">Design Practice</span>
+                        <span class="item-excerpt">Brian S / Angie R / Shannon L</span>
+                        <span class="more-info">Second Floor</span>
+                        <span class="more-info">(2:05 - 2:30)</span>
+                    </div>
+                </div>
+            </div>
+            <div class="Grid-cell">
+                <div class="Demo shared-services">
+                    <div class="grid-item-content">
+                        <span class="item-title">Shared Services</span>
+                        <span class="item-category"> &nbsp;</span>
+                        <span class="item-excerpt">Viktoria K / Michael K</span>
+                        <span class="more-info">First Floor</span>
+                        <span class="more-info">(2:05 - 2:30)</span>
                     </div>
                 </div>
             </div>
