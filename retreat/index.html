@@ -1,0 +1,480 @@
+<html>
+
+<head>
+    <style>
+        @import url("https://fonts.googleapis.com/css?family=Roboto:400,700");
+
+        body {
+            color: #000;
+            font-family: "Roboto", sans-serif;
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1335px;
+            margin: 0 auto;
+        }
+
+        .grid-row {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: flex-start;
+        }
+
+        .grid-item {
+            height: 550px;
+            flex-basis: 20%;
+            -ms-flex: auto;
+            width: 259px;
+            position: relative;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        .grid-row a {
+            text-decoration: none;
+        }
+
+        .wrapping-link {
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            z-index: 2;
+            color: currentColor;
+        }
+
+        .grid-item-wrapper {
+            -webkit-box-sizing: initial;
+            -moz-box-sizing: initial;
+            box-sizing: initial;
+            background: #ececec;
+            margin: 0;
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+            -webkit-transition: padding 0.15s cubic-bezier(0.4, 0, 0.2, 1), margin 0.15s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+            transition: padding 0.15s cubic-bezier(0.4, 0, 0.2, 1), margin 0.15s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+        }
+
+        .grid-item-container {
+            height: 100%;
+            width: 100%;
+            position: relative;
+        }
+
+        .grid-image-top {
+            height: 45%;
+            width: 120%;
+            background-size: cover;
+            position: relative;
+            background-position: 50% 50%;
+            left: -10.5%;
+            top: -4.5%;
+        }
+
+        .grid-image-top .centered {
+            text-align: center;
+            transform: translate(-50%, -50%);
+            background-size: contain;
+            background-repeat: no-repeat;
+            position: absolute;
+            top: 54.5%;
+            left: 50%;
+            width: 60%;
+            height: 60%;
+            background-position: center;
+        }
+
+        .grid-image-top.rex-ray {
+            background: -webkit-gradient(linear, left top, left bottom, from(#007DB8), to(#00447C));
+            background: -webkit-linear-gradient(#007DB8, #00447C);
+            background: -o-linear-gradient(#007DB8, #00447C);
+            background: linear-gradient(#007DB8, #00447C);
+        }
+
+        .build-practice-image {
+            /* background-image: url(https://thecodeteam.com/wp-content/uploads/2017/08/Rex-Ray-icon-209x300.png); */
+            background-image: url('Build-white.png');
+        }
+
+        .grid-image-top.sputnik {
+            background: -webkit-gradient(linear, left top, left bottom, from(#1AA9FB), to(#1785C4));
+            background: -webkit-linear-gradient(#1AA9FB, #1785C4);
+            background: -o-linear-gradient(#1AA9FB, #1785C4);
+            background: linear-gradient(#1AA9FB, #1785C4);
+        }
+
+        .sputnik-image {
+            background-image: url(https://thecodeteam.com/wp-content/uploads/2017/08/sputnik-1-300x257.png);
+        }
+
+        .grid-image-top.edgex {
+            background: -webkit-gradient(linear, left top, left bottom, from(#952f4c), to(#3e1a51));
+            background: -webkit-linear-gradient(#952f4c, #3e1a51);
+            background: -o-linear-gradient(#952f4c, #3e1a51);
+            background: linear-gradient(#952f4c, #3e1a51);
+        }
+
+        .edgex-image {
+            background-image: url(https://thecodeteam.com/wp-content/uploads/2017/08/edge-x-300x287.png);
+        }
+
+        .grid-image-top.openswitch {
+            background: -webkit-gradient(linear, left top, left bottom, from(#2db89a), to(#00793d));
+            background: -webkit-linear-gradient(#2db89a, #00793d);
+            background: -o-linear-gradient(#2db89a, #00793d);
+            background: linear-gradient(#2db89a, #00793d);
+        }
+
+        .openswitch-image {
+            background-image: url(https://thecodeteam.com/wp-content/uploads/2017/08/open-switch-300x207.png);
+        }
+
+        .grid-image-top.scaleio {
+            background: -webkit-gradient(linear, left top, left bottom, from(#2e96dd), to(#326de6));
+            background: -webkit-linear-gradient(#2e96dd, #326de6);
+            background: -o-linear-gradient(#2e96dd, #326de6);
+            background: linear-gradient(#2e96dd, #326de6);
+        }
+
+        .scaleio-image {
+            background-image: url(https://thecodeteam.com/wp-content/uploads/2017/08/K8s_ScaleIO_Color-white-thumb-221x300.png);
+        }
+
+        .grid-image-top.csi {
+            background: -webkit-gradient(linear, left top, left bottom, from(#464646), to(#000000));
+            background: -webkit-linear-gradient(#464646, #000000);
+            background: -o-linear-gradient(#464646, #000000);
+            background: linear-gradient(#464646, #000000);
+        }
+
+        .csi-image {
+            background-image: url(https://thecodeteam.com/wp-content/uploads/2017/08/csi-1-300x99.png);
+        }
+
+        .grid-image-top.kubernetes {
+            background: -webkit-gradient(linear, left top, left bottom, from(#09C1D1), to(#326DE6));
+            background: -webkit-linear-gradient(#09C1D1, #326DE6);
+            background: -o-linear-gradient(#09C1D1, #326DE6);
+            background: linear-gradient(#09C1D1, #326DE6);
+        }
+
+        .kubernetes-image {
+            background-image: url(https://thecodeteam.com/wp-content/uploads/2017/08/kubernetes-300x293.png);
+        }
+
+        .grid-image-top.grpc {
+            background: -webkit-gradient(linear, left top, left bottom, from(#0CC1C8), to(#2E838C));
+            background: -webkit-linear-gradient(#0CC1C8, #2E838C);
+            background: -o-linear-gradient(#0CC1C8, #2E838C);
+            background: linear-gradient(#0CC1C8, #2E838C);
+        }
+
+        .grpc-image {
+            background-image: url(https://thecodeteam.com/wp-content/uploads/2017/08/grpc-300x105.png);
+        }
+
+        .grid-image-top.envoy {
+            background: -webkit-gradient(linear, left top, left bottom, from(#290B54), to(#130229));
+            background: -webkit-linear-gradient(#290B54, #130229);
+            background: -o-linear-gradient(#290B54, #130229);
+            background: linear-gradient(#290B54, #130229);
+        }
+
+        .envoy-image {
+            background-image: url(https://thecodeteam.com/wp-content/uploads/2017/08/envoy_logo-5028052-300x91.png);
+        }
+
+        .grid-image-top.istio {
+            background: -webkit-gradient(linear, left top, left bottom, from(#4A73C0), to(#466BB0));
+            background: -webkit-linear-gradient(#4A73C0, #466BB0);
+            background: -o-linear-gradient(#4A73C0, #466BB0);
+            background: linear-gradient(#4A73C0, #466BB0);
+        }
+
+        .istio-image {
+            background-image: url(https://thecodeteam.com/wp-content/uploads/2017/08/istio-203x300.png);
+        }
+
+        .grid-item-content {
+            padding: 0 20px 20px 20px;
+        }
+
+        .item-title {
+            font-size: 24px;
+            line-height: 26px;
+            font-weight: 700;
+            margin-bottom: 18px;
+            display: block;
+        }
+
+        .item-category {
+            text-transform: uppercase;
+            display: block;
+            margin-bottom: 20px;
+            font-size: 14px;
+        }
+
+        .item-excerpt {
+            margin-bottom: 20px;
+            display: block;
+            font-size: 14px;
+        }
+
+        .more-info {
+            position: absolute;
+            bottom: 0;
+            margin-bottom: 25px;
+            padding-left: 0;
+            transition-duration: .5s;
+            font-size: 12px;
+            display: flex;
+        }
+
+        .more-info i {
+            padding-left: 5px;
+            transition-duration: .5s;
+        }
+
+        .grid-item:hover .more-info i {
+            padding-left: 20px;
+            transition-duration: .5s;
+        }
+
+        .more-info i::before {
+            font-size: 16px;
+        }
+
+        .grid-item:hover .grid-item-wrapper {
+            padding: 2% 2%;
+            margin: -2% -2%;
+        }
+
+        @media(max-width: 1333px) {
+            .grid-item {
+                flex-basis: 33.33%;
+            }
+        }
+
+        @media(max-width: 1073px) {
+            .grid-item {
+                flex-basis: 33.33%;
+            }
+        }
+
+        @media(max-width: 815px) {
+            .grid-item {
+                flex-basis: 50%;
+            }
+        }
+
+        @media(max-width: 555px) {
+            .grid-item {
+                flex-basis: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <table border=1>
+        <tbody>
+            <tr>
+                <td colspan="5">March Retreat - Conference Session Schedule</td>
+            </tr>
+            <tr style='height:20px;'>
+                <td class="s3"></td>
+                <td class="s4">Riverside</td>
+                <td class="s5 softmerge">
+                    <div class="softmerge-inner" style="width: 244px; left: -3px;">3rd Flr Training Room</div>
+                </td>
+                <td class="s6">2nd Floor</td>
+                <td class="s7">1st Floor</td>
+            </tr>
+        </tbody>
+    </table>
+
+
+    <div class="container">
+        <div class="grid-row">
+            <div class="grid-item">
+                <div class="grid-item-wrapper">
+                    <div class="grid-item-container">
+                        <div class="grid-image-top rex-ray">
+                            <span class="centered project-image-bg build-practice-image"></span>
+                        </div>
+                        <div class="grid-item-content">
+                            <span class="item-title">Deliver</span>
+                            <span class="item-category">Dev Practice Area</span>
+                            <span class="item-excerpt">Brian Samson & Charlie Retzler</span>
+                            <span class="more-info">River View 3rd Floor<i
+                                    class="fas fa-long-arrow-alt-right"></i></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="grid-item">
+                <a class="wrapping-link" href="https://www.dell.com/learn/us/en/555/campaigns/xps-linux-laptop_us"
+                    target="_blank"></a>
+                <div class="grid-item-wrapper">
+                    <div class="grid-item-container">
+                        <div class="grid-image-top sputnik">
+                            <span class="centered project-image-bg sputnik-image"></span>
+                        </div>
+                        <div class="grid-item-content">
+                            <span class="item-title">Sputnik</span>
+                            <span class="item-category">Developer System</span>
+                            <span class="item-excerpt">A developer focused laptop with a pre-installed and fully support
+                                Ubuntu im...</span>
+                            <span class="more-info">View Project <i class="fas fa-long-arrow-alt-right"></i></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="grid-item">
+                <a class="wrapping-link" href="https://www.edgexfoundry.org/" target="_blank"></a>
+                <div class="grid-item-wrapper">
+                    <div class="grid-item-container">
+                        <div class="grid-image-top edgex">
+                            <span class="centered project-image-bg edgex-image"></span>
+                        </div>
+                        <div class="grid-item-content">
+                            <span class="item-title">EdgeX Foundry</span>
+                            <span class="item-category">Internet of Things</span>
+                            <span class="item-excerpt">A vendor-neutral open source project building a common open
+                                framework for I...</span>
+                            <span class="more-info">View Project <i class="fas fa-long-arrow-alt-right"></i></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="grid-item">
+                <a class="wrapping-link" href="https://www.openswitch.net/" target="_blank"></a>
+                <div class="grid-item-wrapper">
+                    <div class="grid-item-container">
+                        <div class="grid-image-top openswitch">
+                            <span class="centered project-image-bg openswitch-image"></span>
+                        </div>
+                        <div class="grid-item-content">
+                            <span class="item-title">OpenSwitch</span>
+                            <span class="item-category">Software Based Infrastructure</span>
+                            <span class="item-excerpt">The OpenSwitch platform is an open source, Linux-based network
+                                operating sy...</span>
+                            <span class="more-info">View Project <i class="fas fa-long-arrow-alt-right"></i></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="grid-item">
+                <a class="wrapping-link"
+                    href="https://github.com/kubernetes/kubernetes/tree/master/examples/volumes/scaleio"
+                    target="_blank"></a>
+                <div class="grid-item-wrapper">
+                    <div class="grid-item-container">
+                        <div class="grid-image-top scaleio">
+                            <span class="centered project-image-bg scaleio-image"></span>
+                        </div>
+                        <div class="grid-item-content">
+                            <span class="item-title">K8s + ScaleIO</span>
+                            <span class="item-category">Infrastructure as Code</span>
+                            <span class="item-excerpt">Configure Kubernetes resources to consume storage from volumes
+                                hosted on Sc...</span>
+                            <span class="more-info">View Project <i class="fas fa-long-arrow-alt-right"></i></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="grid-item">
+                <a class="wrapping-link" href="https://thecodeteam.com/projects/container-storage-interface/"></a>
+                <div class="grid-item-wrapper">
+                    <div class="grid-item-container">
+                        <div class="grid-image-top csi">
+                            <span class="centered project-image-bg csi-image"></span>
+                        </div>
+                        <div class="grid-item-content">
+                            <span class="item-title">Container Storage Interface</span>
+                            <span class="item-category">Software Based Infrastructure</span>
+                            <span class="item-excerpt">A universal storage interface allowing easy interoperability
+                                between conta...</span>
+                            <span class="more-info">View Project <i class="fas fa-long-arrow-alt-right"></i></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="grid-item">
+                <a class="wrapping-link" href="https://thecodeteam.com/projects/kubernetes/"></a>
+                <div class="grid-item-wrapper">
+                    <div class="grid-item-container">
+                        <div class="grid-image-top kubernetes">
+                            <span class="centered project-image-bg kubernetes-image"></span>
+                        </div>
+                        <div class="grid-item-content">
+                            <span class="item-title">Kubernetes</span>
+                            <span class="item-category">Software Based Infrastructure</span>
+                            <span class="item-excerpt">An open-source system for automating deployment, scaling, and
+                                management of...</span>
+                            <span class="more-info">View Project <i class="fas fa-long-arrow-alt-right"></i></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="grid-item">
+                <a class="wrapping-link" href="https://grpc.io/" target="_blank"></a>
+                <div class="grid-item-wrapper">
+                    <div class="grid-item-container">
+                        <div class="grid-image-top grpc">
+                            <span class="centered project-image-bg grpc-image"></span>
+                        </div>
+                        <div class="grid-item-content">
+                            <span class="item-title">GRPC</span>
+                            <span class="item-category">Tools and Libraries</span>
+                            <span class="item-excerpt">A high performance, open source, general-purpose RPC
+                                framework.</span>
+                            <span class="more-info">View Project <i class="fas fa-long-arrow-alt-right"></i></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="grid-item">
+                <a class="wrapping-link" href="https://thecodeteam.com/projects/envoy/"></a>
+                <div class="grid-item-wrapper">
+                    <div class="grid-item-container">
+                        <div class="grid-image-top envoy">
+                            <span class="centered project-image-bg envoy-image"></span>
+                        </div>
+                        <div class="grid-item-content">
+                            <span class="item-title">Envoy</span>
+                            <span class="item-category">Software Based Infrastructure</span>
+                            <span class="item-excerpt">An open source edge and service proxy, from the developers at
+                                Lyft.</span>
+                            <span class="more-info">View Project <i class="fas fa-long-arrow-alt-right"></i></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="grid-item">
+                <a class="wrapping-link" href="https://thecodeteam.com/projects/istio/"></a>
+                <div class="grid-item-wrapper">
+                    <div class="grid-item-container">
+                        <div class="grid-image-top istio">
+                            <span class="centered project-image-bg istio-image"></span>
+                        </div>
+                        <div class="grid-item-content">
+                            <span class="item-title">Istio</span>
+                            <span class="item-category">Software Based Infrastructure</span>
+                            <span class="item-excerpt">Connect, secure, control, and observe services.</span>
+                            <span class="more-info">View Project <i class="fas fa-long-arrow-alt-right"></i></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
